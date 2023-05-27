@@ -6,6 +6,8 @@
 
 #### [GitHub](https://github.com/wcerteza)
 
+#### [Linkedin](https://www.linkedin.com/in/will-certeza/)
+
 ---
 
 ### **_Description_**

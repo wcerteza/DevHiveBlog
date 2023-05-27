@@ -1,9 +1,9 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express')
+const router = express.Router()
+const postsCtrl = require('../controllers/posts')
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+router.get('/new', postsCtrl.new)
 
-module.exports = router;
+router.post('/', postsCtrl.create)
+
+module.exports = router
