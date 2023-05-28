@@ -34,6 +34,7 @@ nav {
   top: 0;
   left: 10px;
   margin: 0;
+  letter-spacing: 4px;
 }
 
 .login {
@@ -110,4 +111,71 @@ nav {
   border: 1px solid #ccc;
   border-radius: 3px;
   resize: none;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.index-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.index-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 70vw;
+}
+
+.read-more {
+  padding: 10px 20px;
+  background-color: #363bcc;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.created-at {
+  color:#949494;
+}
+
+.content {
+  line-height: 1.5;
+  margin-bottom: 6px;
+  align-self: flex-start;
+}
+
+.back {
+  padding: 10px 20px;
+  background-color: #363bcc;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
 }

@@ -5,6 +5,11 @@ const index = async (req, res) => {
   res.render('posts/index', { posts })
 }
 
+async function show(req, res) {
+  const post = await Post.findById(req.params.id)
+  res.render('posts/show', { post })
+}
+
 const newPost = (req, res) => {
   res.render('posts/new', { title: 'Post', errorMsg: '' })
 }
@@ -21,5 +26,6 @@ const create = async (req, res) => {
 module.exports = {
   new: newPost,
   create,
-  index
+  index,
+  show
 }
