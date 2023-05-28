@@ -4,7 +4,7 @@
 
 body {
   box-sizing: border-box;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Allerta Stencil', sans-serif;
 }
 
 a {
@@ -17,9 +17,31 @@ a {
 
 nav {
   display: flex;
-  justify-content: flex-start;
-  align-items: end;
+  justify-content: space-between;
+  align-items: flex-end;
   padding: 0 20px 0 30px;
   background-color: black;
   height: 20vh;
+}
+
+.title {
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  margin: 0;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0;
+}
+
+.container {
+  display: flex;
+
 }

@@ -11,9 +11,9 @@ const postSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  timestamp: {
+  createdAt: {
     type: Date,
-    required: true
+    default: Date.now
   },
   author: {
     type: Schema.Types.ObjectId,
