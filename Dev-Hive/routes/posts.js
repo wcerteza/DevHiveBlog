@@ -6,4 +6,5 @@ router.get('/new', postsCtrl.new)
 
 router.post('/', postsCtrl.create)
 
+router.get('/', postsCtrl.index)
 module.exports = router

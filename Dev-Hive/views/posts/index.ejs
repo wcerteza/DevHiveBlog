@@ -1,0 +1,12 @@
+<%- include('../partials/header') %>
+<h1 class="index-title">all posts</h1>
+<div class="index-container">
+  <% posts.forEach(function(p){ %>
+  <div>
+    <h1 class="index-title"><%= p.title %></h1>
+  </div>
+  <div class="created-at"><%= p.createdAt.toLocaleDateString() %></div>
+  <div class="content"><%= p.content %></div>
+  <% }) %>
+</div>
+<%- include('../partials/footer') %>
