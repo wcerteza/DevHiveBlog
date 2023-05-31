@@ -2,12 +2,12 @@ const Post = require('../models/post')
 
 const index = async (req, res) => {
   const posts = await Post.find({}).sort({ createdAt: 'desc' })
-  res.render('posts/index', { posts })
+  res.render('posts/index', { title: 'All Posts', posts })
 }
 
 async function show(req, res) {
   const post = await Post.findById(req.params.id)
-  res.render('posts/show', { post })
+  res.render('posts/show', { title: '', post })
 }
 
 const newPost = (req, res) => {

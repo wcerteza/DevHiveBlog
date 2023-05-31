@@ -26,6 +26,16 @@ nav {
   height: 20vh;
 }
 
+nav > a:hover:not(.active) {
+  color: white;
+  background-color: #424748;
+}
+
+nav > a.active {
+  color: white;
+  cursor: default;
+}
+
 .title {
   color: white;
   font-size: 50px;
@@ -178,4 +188,16 @@ nav {
   border-radius: 3px;
   cursor: pointer;
   font-size: 12px;
+}
+
+.content .read-more-content {
+  display: none;
+}
+
+.content.expanded .read-more-content {
+  display: block;
+}
+
+.content.expanded .read-more {
+  display: none;
 }

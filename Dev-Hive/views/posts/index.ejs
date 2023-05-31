@@ -5,7 +5,10 @@
   <div class="post-container">
     <h1 class="index-title"><%= p.title %></h1>
     <div class="created-at"><%= p.createdAt.toLocaleDateString() %></div>
-    <div class="content"><%= p.content %></div>
+    <div class="content">
+      <%= p.content.substring(0, 200) %>
+      <span class="read-more-content"><%= p.content.substring(200) %></span>
+    </div>
     <a href="/posts/<%= p._id %>" class="read-more">Read More</a>
   </div>
   <% }) %>

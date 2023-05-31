@@ -9,4 +9,25 @@
   </div>
 </div>
 
-<%- include('../partials/footer') %>
+<div class="comment-section">
+  <% if (user) { %>
+  <h2 class="comment-title">comment:</h2>
+  <form method="POST" action="/posts/<%= post._id %>/comments">
+    <textarea name="text" class="comment-text"></textarea>
+    <input type="submit" value="Add Comment" />
+  </form>
+  <% } %>
+</div>
+
+<% if (post.comments.length) { %>
+<h2>comments</h2>
+<% post.comments.forEach(function(c){ %>
+<div class="review-user">
+  <img src="<%= c.userAvatar %>" referrerpolicy="no-referrer" alt="avatar" /><%=
+  c.userName %>
+</div>
+<div><%= c.time.toLocaleDateString() %></div>
+<div><%= c.text %></div>
+<% }) %> <% } else { %>
+<h5>No Comments Yet</h5>
+<% } %> <%- include('../partials/footer') %>
