@@ -16,6 +16,8 @@ const newPost = (req, res) => {
 
 const create = async (req, res) => {
   try {
+    req.body.author = req.author._id
+    req.body.usersName = req.author.name
     await Post.create(req.body)
     res.redirect('/posts')
   } catch (err) {

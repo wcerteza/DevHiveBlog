@@ -1,7 +1,6 @@
 const Post = require('../models/post')
 
 const create = async (req, res) => {
-  console.log(req.user)
   const post = await Post.findById(req.params.id)
   req.body.user = req.user._id
   req.body.userName = req.user.name
@@ -15,6 +14,25 @@ const create = async (req, res) => {
   res.redirect(`/posts/${post._id}`)
 }
 
+const deleteComment = (req, res, next) => {
+  Post.findOne({
+    'comments._id': req.params.id,
+    'comments.user': req.user._id
+  }).then((post) => {
+    if (!post) return res.redirect('/posts')
+    post.comments.remove(req.params.id)
+    post
+      .save()
+      .then(() => {
+        res.redirect(`/posts/${post._id}`)
+      })
+      .catch((err) => {
+        return next(err)
+      })
+  })
+}
+
 module.exports = {
-  create
+  create,
+  delete: deleteComment
 }
