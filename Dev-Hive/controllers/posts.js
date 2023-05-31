@@ -7,7 +7,7 @@ const index = async (req, res) => {
 
 async function show(req, res) {
   const post = await Post.findById(req.params.id)
-  res.render('posts/show', { title: '', post })
+  res.render('posts/show', { title: 'Show', post })
 }
 
 const newPost = (req, res) => {
@@ -15,9 +15,10 @@ const newPost = (req, res) => {
 }
 
 const create = async (req, res) => {
+  req.body.author = req.user._id
+  req.body.usersName = req.user.name
+  req.body.usersAvatar = req.user.avatar
   try {
-    req.body.author = req.author._id
-    req.body.usersName = req.author.name
     await Post.create(req.body)
     res.redirect('/posts')
   } catch (err) {

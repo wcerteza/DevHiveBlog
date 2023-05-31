@@ -1,8 +1,8 @@
 <%- include('../partials/header') %>
-<h1 class="page-title">Show Page</h1>
 <div class="index-container">
   <div class="post-container">
     <h1 class="index-title"><%= post.title %></h1>
+    <div><%= post.usersAvatar %></div>
     <div class="post-user"><%= post.usersName %></div>
     <div class="created-at"><%= post.createdAt.toLocaleDateString() %></div>
     <div class="content"><%= post.content %></div>
@@ -12,7 +12,7 @@
 
 <div class="comment-section">
   <% if (user) { %>
-  <h2 class="comment-title">comment:</h2>
+  <h2 class="comment-title">Comment:</h2>
   <form method="POST" action="/posts/<%= post._id %>/comments">
     <textarea name="text" class="comment-text"></textarea>
     <input type="submit" value="Add Comment" />
@@ -21,14 +21,26 @@
 </div>
 
 <% if (post.comments.length) { %>
-<h2>comments</h2>
+<h2 class="all-comments">All Comments</h2>
 <% post.comments.forEach(function(c){ %>
 <div class="review-user">
-  <img src="<%= c.userAvatar %>" referrerpolicy="no-referrer" alt="avatar" /><%=
-  c.userName %>
+  <img
+    src="<%= c.userAvatar %>"
+    referrerpolicy="no-referrer"
+    class="comment-avatar"
+    alt="avatar"
+  /><%= c.userName %>
 </div>
-<div><%= c.time.toLocaleDateString() %></div>
-<div><%= c.text %></div>
-<% }) %> <% } else { %>
-<h5>No Comments Yet</h5>
-<% } %> <%- include('../partials/footer') %>
+
+<div class="btm-commentsect">
+  <% if (user?._id.equals(c.user)) { %>
+  <div class="comment-time"><%= c.time.toLocaleDateString() %></div>
+  <div class="comment-content"><%= c.text %></div>
+  <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
+    <button type="submit">X</button>
+  </form>
+  <% } %> <% }) %> <% } else { %>
+  <h5 class="no-comment">No Comments Yet</h5>
+  <% } %>
+</div>
+<%- include('../partials/footer') %>

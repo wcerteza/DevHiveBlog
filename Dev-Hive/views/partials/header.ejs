@@ -11,18 +11,26 @@
       href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap"
       rel="stylesheet"
     />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Roboto:wght@300&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Open+Sans&display=swap" rel="stylesheet">
     <title>Dev Hive</title>
   </head>
   <body>
     <nav>
       <h1 class="title">devhive</h1>
       <div class="links">
-        <a href="/" <%- title === 'Home' ? 'class = "active"' : '' %>>Home</a>
+        <a href="/">Home</a>
         <a href="/posts" <%- title === 'All Posts' ? 'class = "active"' : '' %>>All Posts</a>
         <a href="/posts/new" <%- title === 'Post' ? 'class = "active"' : '' %>>Post</a>
       </div>
+      <div class="login-logout">
       <a href="/auth/google" class="login" <%- title === 'Log In' ? 'class = "active"' : '' %>>Log In</a>
       <a href="/logout" <%- title === 'Log Out' ? 'class = "active"' : '' %>>Log Out</a>
+      </div>
     </nav>
   </body>
 </html>

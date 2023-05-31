@@ -39,6 +39,7 @@ const postSchema = new mongoose.Schema({
     ref: 'User'
   },
   usersName: String,
+  usersAvatar: String,
   comments: [commentSchema]
 })
 
