@@ -6,6 +6,9 @@
     <div class="post-user"><%= post.usersName %></div>
     <div class="created-at"><%= post.createdAt.toLocaleDateString() %></div>
     <div class="content"><%= post.content %></div>
+    <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+      <button type="submit" class="delete-post">Delete Post</button>
+    </form>
     <a href="/posts" class="back">Back</a>
   </div>
 </div>
@@ -15,7 +18,7 @@
   <h2 class="comment-title">Comment:</h2>
   <form method="POST" action="/posts/<%= post._id %>/comments">
     <textarea name="text" class="comment-text"></textarea>
-    <input type="submit" value="Add Comment" />
+    <input type="submit" class="add-comment" value="Add Comment" />
   </form>
   <% } %>
 </div>

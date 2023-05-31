@@ -26,9 +26,19 @@ const create = async (req, res) => {
   }
 }
 
+const deletePost = async (req, res) => {
+  try {
+    await Post.deleteOne({ _id: req.params.id })
+    res.redirect('/posts')
+  } catch (err) {
+    console.log(err)
+  }
+}
+
 module.exports = {
   new: newPost,
   create,
   index,
-  show
+  show,
+  delete: deletePost
 }
