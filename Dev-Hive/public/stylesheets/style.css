@@ -229,6 +229,15 @@ nav > a.active {
   border-radius: 3px;
   resize: none;
   margin-bottom: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+.add-comment {
+  display: block;
+  margin-bottom: 10px;
+  margin-left: auto;
 }
 
 .all-comments {
