@@ -3,7 +3,7 @@ var router = express.Router()
 const passport = require('passport')
 const homeCtrl = require('../controllers/homes')
 /* GET home page. */
-router.get('/', homeCtrl.banana)
+router.get('/', homeCtrl.render)
 
 router.get(
   '/auth/google',

@@ -10,13 +10,13 @@ body {
 }
 
 a {
-  font-family: 'Allerta Stencil', sans-serif;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   color: #EEEEEE;
   font-weight: bold;
   text-decoration: none;
   padding: 20px;
   font-size: 20px;
+  letter-spacing: 2px;
 }
 
 nav {
@@ -66,6 +66,10 @@ nav > a:hover:not(.active) {
   font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
+}
+
+.create-title {
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 .new-post {
@@ -122,13 +126,12 @@ nav > a:hover:not(.active) {
 }
 
 .page-title {
-  font-family: 'Allerta Stencil', sans-serif;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 32px;
   font-weight: bold;
   text-align: center;
+  letter-spacing: 2px;
   margin-top: 20px;
-  text-decoration: underline;
 }
 
 .index-container {
@@ -139,9 +142,8 @@ nav > a:hover:not(.active) {
 }
 
 .index-title {
-  font-family: 'Allerta Stencil', sans-serif;
   font-family: 'Open Sans', sans-serif;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 5px;
   text-align: center;
@@ -169,6 +171,7 @@ nav > a:hover:not(.active) {
 }
 
 .read-more {
+  font-family: 'Open Sans', sans-serif;
   padding: 10px 20px;
   background-color: #363bcc;
   color: #fff;
@@ -184,6 +187,9 @@ nav > a:hover:not(.active) {
   font-family: 'Allerta Stencil', sans-serif;
   font-family: 'Open Sans', sans-serif;
   color:#949494;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .content {
@@ -345,13 +351,15 @@ nav > a:hover:not(.active) {
 }
 
 .author {
-  font-family: 'Allerta Stencil', sans-serif;
   font-family: 'Open Sans', sans-serif;
+  color: #949494;
+  font-size: 16px;
 }
 
 .post-user {
-  font-family: 'Allerta Stencil', sans-serif;
   font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #949494;
 }
 
 .dev-hive {
@@ -370,12 +378,38 @@ nav > a:hover:not(.active) {
   grid-template-columns: repeat(3, 300px);
   grid-auto-rows: minmax(300px, auto);
   grid-column-gap: 20px;
+
 }
 
 .total-posts,
 .newest-post,
 .trending-post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   border: none;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  background-color: #EEEEEE;
+}
+
+.post-title,
+.new-post-head,
+.trending-post-title {
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.post-number,
+.new-post-title,
+.trending-post-content {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.post-number {
+  font-size: 75px;
 }
