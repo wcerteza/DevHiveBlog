@@ -416,6 +416,8 @@ nav > a:hover:not(.active) {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   background-color: #EEEEEE;
+  height: 300px;
+  width: 300px;
 }
 
 .post-title,
@@ -424,6 +426,7 @@ nav > a:hover:not(.active) {
   text-align: center;
   font-size: 35px;
   font-family: 'Bebas Neue', sans-serif;
+  color: #222831;
 }
 
 .post-number,

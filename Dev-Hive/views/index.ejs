@@ -1,22 +1,30 @@
 <%- include('./partials/header') %>
 
 <title>Dev Hive</title>
+
 <div class="landing-container">
   <div class="grid-container">
-    <div class="total-posts">
-      <p class="post-title">Post Count</p>
-      <p class="post-number"><%= postCount %></p>
-    </div>
+    <a href="/posts">
+      <div class="total-posts">
+        <p class="post-title">Post Count</p>
+        <p class="post-number"><%= postCount %></p>
+      </div>
+    </a>
 
-    <div class="newest-post">
-      <p class="new-post-head">Newest Post</p>
-      <p class="new-post-title">'<%= newestPost.title %>'</p>
-    </div>
+    <a href="/posts/<%= newestPost._id %>">
+      <div class="newest-post">
+        <p class="new-post-head">Newest Post</p>
+        <p class="new-post-title">'<%= newestPost.title %>'</p>
+        <%= console.log(newestPost._id) %>
+      </div>
+    </a>
 
-    <div class="trending-post">
-      <p class="trending-post-title">Trending Post</p>
-      <p class="trending-post-content">'<%= mostPopularPost.title %>'</p>
-    </div>
+    <a href="/posts/<%= mostPopularPost._id %>">
+      <div class="trending-post">
+        <p class="trending-post-title">Trending Post</p>
+        <p class="trending-post-content">'<%= mostPopularPost.title %>'</p>
+      </div>
+    </a>
   </div>
 </div>
 <%- include('./partials/footer') %>

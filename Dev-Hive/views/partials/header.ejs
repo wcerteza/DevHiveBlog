@@ -33,8 +33,9 @@
       <h1 class="title">devhive</h1>
       <div class="links">
         <a href="/" <%- title === 'Home' ? 'class = "active"' : '' %>>Home</a>
-        <% if (user) { %>
         <a href="/posts" <%- title === 'All Posts' ? 'class = "active"' : '' %>>All Posts</a>
+        <% if (user) { %>
+
         <a href="/posts/new" <%- title === 'Post' ? 'class = "active"' : '' %>>Post</a>
       </div>
       <div class="login-logout">
