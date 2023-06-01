@@ -23,13 +23,16 @@
     <nav>
       <h1 class="title">devhive</h1>
       <div class="links">
-        <a href="/">Home</a>
-        <a href="/posts" <%- title === 'All Posts' ? 'class = "active"' : '' %>>All Posts</a>
+        <a href="/" <%- title === 'Home' ? 'class = "active"' : '' %>>Home</a>
+        <% if (user) { %>
         <a href="/posts/new" <%- title === 'Post' ? 'class = "active"' : '' %>>Post</a>
       </div>
       <div class="login-logout">
-      <a href="/auth/google" class="login" <%- title === 'Log In' ? 'class = "active"' : '' %>>Log In</a>
-      <a href="/logout" <%- title === 'Log Out' ? 'class = "active"' : '' %>>Log Out</a>
+        <a href="/logout" <%- title === 'Log Out' ? 'class = "active"' : '' %>>Log Out</a>
+        <% } else { %>
+          <a href="/posts" <%- title === 'All Posts' ? 'class = "active"' : '' %>>All Posts</a>
+        <a href="/auth/google" class="login" <%- title === 'Log In' ? 'class = "active"' : '' %>>Log In</a>
+        <% } %>
       </div>
     </nav>
   </body>

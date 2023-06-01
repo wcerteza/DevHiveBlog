@@ -6,13 +6,13 @@
 
 body {
   font-family: 'Allerta Stencil', sans-serif;
-  background-color: #f2f2f2;
+  background-color: #C9D6DF;
 }
 
 a {
   font-family: 'Allerta Stencil', sans-serif;
   font-family: 'Roboto', sans-serif;
-  color: white;
+  color: #EEEEEE;
   font-weight: bold;
   text-decoration: none;
   padding: 20px;
@@ -24,22 +24,22 @@ nav {
   justify-content: space-between;
   align-items: flex-end;
   padding: 0 20px 0 30px;
-  background-color: black;
+  background-color: #222831;
   height: 20vh;
 }
 
 nav > a:hover:not(.active) {
   color: white;
-  background-color: #424748;
+
 }
 
-nav > a.active {
-  color: white;
+.active {
+  color:#00ADB5;
   cursor: default;
 }
 
 .title {
-  color: white;
+  color: #EEEEEE;
   font-size: 50px;
   font-weight: bold;
   position: absolute;
@@ -58,7 +58,7 @@ nav > a.active {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f2f2f2;
+  background-color: #C9D6DF;
 }
 
 .container h1 {
@@ -73,7 +73,7 @@ nav > a.active {
   width: 100%;
   margin: 20px;
   padding: 20px;
-  background-color: #fff;
+  background-color: #EEEEEE;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -157,6 +157,15 @@ nav > a.active {
   padding: 10px;
   margin-bottom: 20px;
   width: 70vw;
+  position: relative;
+  background-color: #EEEEEE;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  width: 100%;
 }
 
 .read-more {
@@ -192,7 +201,17 @@ nav > a.active {
   border: none;
   border-radius: 3px;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 15px;
+}
+
+.delete-post {
+  padding: 10px 20px;
+  background-color: #363bcc;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 15px;
 }
 
 .content .read-more-content {
@@ -253,7 +272,7 @@ nav > a.active {
   font-family: 'Open Sans', sans-serif;
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 
 .comment-avatar {
@@ -313,11 +332,6 @@ nav > a.active {
 
   .review-user {
     justify-content: center;
-    margin-bottom: 20px;
-  }
-
-  .btm-commentsect {
-    margin-bottom: 20px;
   }
 
   .comment-content {
@@ -328,4 +342,14 @@ nav > a.active {
 
 .no-comment {
   text-align: center;
+}
+
+.author {
+  font-family: 'Allerta Stencil', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.post-user {
+  font-family: 'Allerta Stencil', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }

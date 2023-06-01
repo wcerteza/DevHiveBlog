@@ -2,14 +2,15 @@
 <div class="index-container">
   <div class="post-container">
     <h1 class="index-title"><%= post.title %></h1>
-    <div><%= post.usersAvatar %></div>
     <div class="post-user"><%= post.usersName %></div>
     <div class="created-at"><%= post.createdAt.toLocaleDateString() %></div>
     <div class="content"><%= post.content %></div>
-    <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
-      <button type="submit" class="delete-post">Delete Post</button>
-    </form>
-    <a href="/posts" class="back">Back</a>
+    <div class="button-group">
+      <a href="/posts" class="back">Back</a>
+      <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+        <button type="submit" class="delete-post">Delete</button>
+      </form>
+    </div>
   </div>
 </div>
 

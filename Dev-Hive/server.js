@@ -11,6 +11,7 @@ require('dotenv').config()
 require('./config/database')
 require('./config/passport')
 
+const homeRouter = require('./routes/home')
 var indexRouter = require('./routes/index')
 var postsRouter = require('./routes/posts')
 var commentsRouter = require('./routes/comments')
