@@ -1,6 +1,6 @@
 const Post = require('../models/post')
 
-const banana = async (req, res) => {
+const render = async (req, res) => {
   const allPosts = await Post.find({})
   const postCount = allPosts.length
   const newestPost = allPosts[postCount - 1]
@@ -16,5 +16,5 @@ const banana = async (req, res) => {
 }
 
 module.exports = {
-  banana
+  render
 }

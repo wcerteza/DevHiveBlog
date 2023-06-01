@@ -353,3 +353,29 @@ nav > a:hover:not(.active) {
   font-family: 'Allerta Stencil', sans-serif;
   font-family: 'Open Sans', sans-serif;
 }
+
+.dev-hive {
+  text-align: center;
+}
+
+.landing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-auto-rows: minmax(300px, auto);
+  grid-column-gap: 20px;
+}
+
+.total-posts,
+.newest-post,
+.trending-post {
+  border: none;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

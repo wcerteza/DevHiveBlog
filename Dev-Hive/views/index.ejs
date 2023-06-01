@@ -1,6 +1,23 @@
 <%- include('./partials/header') %>
 
 <title>Dev Hive</title>
-<h1>Home Page</h1>
-totalPosts: <%= postCount %> newestPost: <%= newestPost.title %> mostPop: <%=
-mostPopularPost.title %> <%- include('./partials/footer') %>
+<h1 class="dev-hive">dev hive</h1>
+<div class="landing-container">
+  <div class="grid-container">
+    <div class="total-posts">
+      <p class="post-title">Post Count</p>
+      <p class="post-number"><%= postCount %></p>
+    </div>
+
+    <div class="newest-post">
+      <p class="new-post-head">newestPost</p>
+      <p class="new-post-title"><%= newestPost.title %></p>
+    </div>
+
+    <div class="trending-post">
+      <p class="trending-post-title">Trending Post</p>
+      <p class="trending-post-content"><%= mostPopularPost.title %></p>
+    </div>
+  </div>
+</div>
+<%- include('./partials/footer') %>
