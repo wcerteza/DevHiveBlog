@@ -7,9 +7,11 @@
     <div class="content"><%= post.content %></div>
     <div class="button-group">
       <a href="/posts" class="back">Back</a>
+      <% if (user) { %>
       <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
         <button type="submit" class="delete-post">Delete</button>
       </form>
+      <% } %>
     </div>
   </div>
 </div>
@@ -35,7 +37,6 @@
     alt="avatar"
   /><%= c.userName %>
 </div>
-
 <div class="btm-commentsect">
   <% if (user?._id.equals(c.user)) { %>
   <div class="comment-time"><%= c.time.toLocaleDateString() %></div>
@@ -43,8 +44,8 @@
   <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
     <button type="submit">X</button>
   </form>
-  <% } %> <% }) %> <% } else { %>
+  <% } else { %>
   <h5 class="no-comment">No Comments Yet</h5>
-  <% } %>
+  <% } %><% })} %>
 </div>
 <%- include('../partials/footer') %>
