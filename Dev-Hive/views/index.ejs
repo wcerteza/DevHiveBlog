@@ -1,17 +1,29 @@
 <%- include('./partials/header') %>
 
 <title>Dev Hive</title>
+<section class="description-section">
+  <div class="description-div">
+    <h1 class="welcome">Welcome to Dev Hive</h1>
+    <p class="description-p">
+      Join DevHive, a vibrant community for developers of all levels! Discover
+      inspiration, insights, and practical tips to advance your coding skills.
+      Connect with a buzzing hive of developers, fostering growth and innovation
+      in the world of technology. Be part of our thriving community and propel
+      your coding journey forward!
+    </p>
+  </div>
+</section>
 
 <div class="landing-container">
   <div class="grid-container">
-    <a href="/posts">
+    <a href="/posts" class="one">
       <div class="total-posts">
         <p class="post-title">Post Count</p>
         <p class="post-number"><%= postCount %></p>
       </div>
     </a>
 
-    <a href="/posts/<%= newestPost._id %>">
+    <a href="/posts/<%= newestPost._id %>" class="two">
       <div class="newest-post">
         <p class="new-post-head">Newest Post</p>
         <p class="new-post-title">'<%= newestPost.title %>'</p>
@@ -19,7 +31,7 @@
       </div>
     </a>
 
-    <a href="/posts/<%= mostPopularPost._id %>">
+    <a href="/posts/<%= mostPopularPost._id %>" class="three">
       <div class="trending-post">
         <p class="trending-post-title">Trending Post</p>
         <p class="trending-post-content">'<%= mostPopularPost.title %>'</p>

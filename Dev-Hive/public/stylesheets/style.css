@@ -455,3 +455,38 @@ nav > a:hover:not(.active) {
   color:#00ADB5;
   text-align: center;
 }
+
+.total-posts:hover, .newest-post:hover, .trending-post:hover {
+  background-color: #d3cdcd;
+}
+
+.description-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #EEEEEE;
+}
+
+.description-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.welcome {
+  font-size: 35px;
+  font-family: 'Bebas Neue', sans-serif;
+  color: #222831;
+}
+
+.description-p {
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  color: #222831;
+  margin-top: 20px;
+}
