@@ -14,6 +14,8 @@
 
 #### Welcome to DevHive, a thriving community for developers of all levels! At DevHive, we believe in the power of collaboration and knowledge sharing to propel the world of coding forward. Our blog serves as a source of inspiration, insights, and practical tips for developers seeking to hone their skills and stay up-to-date with the latest industry trends. Whether you're a seasoned professional or just starting your coding journey, DevHive is here to support you with valuable resources, thought-provoking articles, and a vibrant community eager to connect and learn from one another. Join us at DevHive and be part of a buzzing hive of developers, fostering growth, and innovation in the world of technology.
 
+#### [DevHive Blog](https://dev-hive-blog.herokuapp.com/)
+
 ---
 
 ### **_Technologies_**
@@ -35,22 +37,28 @@
 
 ---
 
-### **_Wire Frame_**
+### **_Before: WireFrame_**
 
 ![WireFrame](images/home.png)
 ![WireFrame](images/allposts.png)
 ![WireFrame](images/post.png)
-![WireFrame](images/oauth.png)
+
+### **_After: Completed website_**
+
+![](images/landing.png)
+![](images/landing2.png)
+![](images/allpostsfinal.png)
+![](images/addpost.png)
+![](images/showpost.png)
 
 ---
 
-### **_How To Get Started_**
+### **_Getting Started_**
 
 - Create Trello Board
 - Craft Wireframe
 - Create README.md
 - Insert scaffolding
-- Code
 
 ---
 
