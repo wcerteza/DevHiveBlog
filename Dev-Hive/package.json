@@ -2,6 +2,9 @@
   "name": "dev-hive",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "nodes": "^20.x"
+  },
   "scripts": {
     "start": "node ./bin/www"
   },
